@@ -1,0 +1,355 @@
+<app-header></app-header>
+
+<div class="hero-wrap tdb-degree-bg banner" style="background-image: url('assets/images/db-banner.jpeg');" data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row no-gutters slider-text justify-content-center align-items-center">
+        <div class="col-lg-8 col-md-6 tdb-animate d-flex align-items-end">
+            <div class="text text-center">
+              <h1 class="mb-4">Find Your <br>Home With Us</h1>
+              <p style="font-size: 18px;">TheDealBuzz is a real estate marketplace serving the Canada. We are helping home buyers find the right home, sellers find the right buyer, and agents & brokers get the online exposure they need to efficiently advertise properties.</p>
+              <form action="#" class="search-location mt-md-5">
+                      <div class="row justify-content-center">
+                          <div class="col-lg-10 align-items-end">
+                              <div class="form-group">
+                                <div class="form-field">
+                                    <!-- <input type="text" class="form-control" placeholder="Search..." [(ngModel)]="province" > -->
+                              <input type="text" class="form-control" placeholder="Search location" [(ngModel)]="city">
+                              <button><span class="fa fa-search"></span></button>
+                            </div>
+                        </div>
+                          </div>
+                      </div>
+                  </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- services -->
+
+
+  <section class="tdb-section tdb-no-pb">
+    <div class="container">
+        <div class="row justify-content-center">
+        <div class="col-md-12 heading-section text-center tdb-animate mb-5">
+            <span class="subheading">Our Services</span>
+          <h2 class="mb-2">The smartest way to buy a home</h2>
+        </div>
+      </div>
+      <div class="row d-flex">
+        <div class="col-md-3 d-flex align-self-stretch tdb-animate">
+          <div class="media block-6 services d-block text-center">
+              <div class="icon d-flex justify-content-center align-items-center"><span class="fa fa-bank"></span></div>
+            <div class="media-body py-md-4">
+              <h3>No Downpayment</h3>
+              <p>Don’t have enough money to buy a house yet? No worries!!! We have got you covered. Now introducing our new zero down payment offers wherein you can make a house your own by giving no money at start.
+                </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 d-flex align-self-stretch tdb-animate">
+          <div class="media block-6 services d-block text-center">
+              <div class="icon d-flex justify-content-center align-items-center"><span class="fa fa-money"></span></div>
+            <div class="media-body py-md-4">
+              <h3>All Cash Offer</h3>
+              <p>We have several policies and lockouts where in your house rates would not decline. If you need to sell it further after over a period of time so we are there to help you as well. Don't hesitate to go with us!!!.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 d-flex align-self-stretch tdb-animate">
+          <div class="media block-6 services d-block text-center">
+              <div class="icon d-flex justify-content-center align-items-center"><span class="fa fa-user"></span></div>
+            <div class="media-body py-md-4">
+              <h3>Experts in Your Corner</h3>
+              <p>We have a best team of experts who have a variant knowledge of mortgage and interest rates so, relax on that we will give you best assistance possible.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 d-flex align-self-stretch tdb-animate">
+          <div class="media block-6 services d-block text-center">
+              <div class="icon d-flex justify-content-center align-items-center"><span class="fa fa-home"></span></div>
+            <div class="media-body py-md-4">
+              <h3>Locked in Pricing</h3>
+              <p>We have several policies and lockouts where in your house rates would not decline. If you need to sell it further after over a period of time so we are there to help you as well. Don't hesitate to go with us!!!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <section class="tdb-section goto-here">
+      <div class="container">
+          <div class="row justify-content-center">
+        <div class="col-md-12 heading-section text-center tdb-animate mb-5">
+            <span class="subheading">What we offer</span>
+          <h2 class="mb-2">New Listings Daily, Right At Your Fingertips.
+          </h2>
+        </div>
+      </div>
+
+
+        <div class="row">
+          <div class="col-md-4"  *ngFor="let product of productList | filter:city | slice:0:3">
+              <div class="property-wrap tdb-animate">
+                  <a href="#" class="img" style="background-image: url(assets/images/work-1.jpg);"></a>
+                  <div class="text">
+
+                      <p class="price"><span class="old-price">800,000</span><span class="orig-price">${{product.price}}<small>/mo</small></span></p>
+                      <ul class="property_list">
+                          <li><span class="fa fa-bed"></span>3</li>
+                          <li><span class="fa fa-bathtub"></span>2</li>
+                          <li><span class="fas fa-stream"></span>1,878 sqft</li>
+                      </ul>
+                      <h3><a [routerLink]="['/product-details']" routerLinkActive="active">{{product.buildingType}}</a></h3>
+                      <span class="location">{{product.locality}}, {{product.city}}, {{product.postalCode}}</span>
+                      <a [routerLink]="['/product-details']" routerLinkActive="active" class="d-flex align-items-center justify-content-center btn-custom">
+                          <span class="fa fa-link"></span>
+                      </a>
+                  </div>
+              </div>
+          </div>
+        </div>
+
+
+      </div>
+  </section>
+
+
+  <section class="tdb-section tdb-degree-bg services-section img mx-md-5" style="background-image: url(assets/images/how-works.jpg);">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row justify-content-start mb-5">
+      <div class="col-md-6 text-center heading-section heading-section-white tdb-animate">
+          <span class="subheading">Work flow</span>
+        <h2 class="mb-3">How it works</h2>
+      </div>
+    </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-12 col-lg-6 d-flex align-self-stretch tdb-animate">
+                <div class="media block-6 services services-2">
+                  <div class="media-body py-md-4 text-center">
+                      <div class="icon mb-3 d-flex align-items-center justify-content-center"><span>01</span></div>
+                    <h3>Evaluate Property</h3>
+                    <p>We follow the procedure to evaluating the exact price of the required property by keeping the present market scenario.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-12 col-lg-6 d-flex align-self-stretch tdb-animate">
+                <div class="media block-6 services services-2">
+                  <div class="media-body py-md-4 text-center">
+                      <div class="icon mb-3 d-flex align-items-center justify-content-center"><span>02</span></div>
+                    <h3>Meet Your Agent</h3>
+                    <p>We generate leads for you and schedule appointments for open houses, showings, and meetings with clients.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-12 col-lg-6 d-flex align-self-stretch tdb-animate">
+                <div class="media block-6 services services-2">
+                  <div class="media-body py-md-4 text-center">
+                      <div class="icon mb-3 d-flex align-items-center justify-content-center"><span>03</span></div>
+                    <h3>Finalizing the Deal</h3>
+                    <p>We will provide you a confidential purchase agreement and enforce your rights in purchase agreement.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-12 col-lg-6 d-flex align-self-stretch tdb-animate">
+                <div class="media block-6 services services-2">
+                  <div class="media-body py-md-4 text-center">
+                      <div class="icon mb-3 d-flex align-items-center justify-content-center"><span>04</span></div>
+                    <h3>Have Your House</h3>
+                    <p>Finally We serve you awesome services so now your dreams come true!!!!!</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+</section>
+
+<section class="tdb-section tdb-no-pb">
+    <div class="container">
+        <div class="row no-gutters">
+            <div class="col-md-6 p-md-5 img img-2 d-flex justify-content-center align-items-center" style="background-image: url(assets/images/about-box.jpg);">
+            </div>
+            <div class="col-md-6 wrap-about py-md-5 tdb-animate">
+      <div class="heading-section p-md-5">
+        <h2 class="mb-4">Open House Ideas That Actually Get You Leads</h2>
+
+        <p>When most of the agents give up even after spending thousands on advertisements ,we don’t. SO next time when someone says open houses don’t work give them the reasons why they are wrong.A Slydial Broadcast app which we have used lets you leave an automated voicemail without rinking their phone ,its making engagement rates high . All you need is a DNC scrubbed list of contacts and a house to promote! .In order to think outside the box we have talked to several producing agents and got them to give their best open house ideas for 2020.
+            </p>
+            </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="tdb-counter img" id="section-counter">
+    <div class="container">
+        <div class="row">
+      <div class="col-md-6 col-lg-3 justify-content-center counter-wrap tdb-animate">
+        <div class="block-18 py-4 mb-4">
+          <div class="text text-border d-flex align-items-center">
+            <strong class="number">305</strong>
+            <span>Area <br>Population</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 justify-content-center counter-wrap tdb-animate">
+        <div class="block-18 py-4 mb-4">
+          <div class="text text-border d-flex align-items-center">
+            <strong class="number">1090</strong>
+            <span>Total <br>Properties</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 justify-content-center counter-wrap tdb-animate">
+        <div class="block-18 py-4 mb-4">
+          <div class="text text-border d-flex align-items-center">
+            <strong class="number">209</strong>
+            <span>Average <br>House</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 justify-content-center counter-wrap tdb-animate">
+        <div class="block-18 py-4 mb-4">
+          <div class="text d-flex align-items-center">
+            <strong class="number">67</strong>
+            <span>Total <br>Branches</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+</section>
+
+<section class="tdb-section testimony-section">
+    <div class="container">
+      <div class="row justify-content-center mb-5">
+        <div class="col-md-7 text-center heading-section tdb-animate">
+            <span class="subheading">Testimonial</span>
+          <h2 class="mb-3">Happy Clients</h2>
+        </div>
+      </div>
+      <div class="row tdb-animate">
+
+          <div class="col-md-12">
+            <div class="item col-md-4">
+              <div class="testimony-wrap  py-4">
+                <div class="text">
+                  <p class="mb-4">Very amazed of how quick the selling process was. Good coordination, good communication and the staff are knowledgeable and informative.</p>
+                  <div class="d-flex align-items-center">
+                      <div class="user-img" style="background-image: url(assets/images/person_1.jpg)"></div>
+                      <div class="pl-3">
+                          <p class="name">Roger Scott</p>
+                          <span class="position">Marketing Manager</span>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="item col-md-4">
+              <div class="testimony-wrap  py-4">
+                <div class="text">
+                  <p class="mb-4">They are amazing! I want to thank everyone for their outstanding support! They made the entire selling experience pleasant even during COVID.</p>
+                  <div class="d-flex align-items-center">
+                      <div class="user-img" style="background-image: url(assets/images/person_2.jpg)"></div>
+                      <div class="pl-3">
+                          <p class="name">Roger Scott</p>
+                          <span class="position">Marketing Manager</span>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="item col-md-4">
+              <div class="testimony-wrap py-4">
+                <div class="text">
+                  <p class="mb-4">Working with the deal buzz was a great experience. They handled both buy and sell. They are knowledgeable hence made the whole process stress free.</p>
+                  <div class="d-flex align-items-center">
+                      <div class="user-img" style="background-image: url(assets/images/person_3.jpg)"></div>
+                      <div class="pl-3">
+                          <p class="name">Roger Scott</p>
+                          <span class="position">Marketing Manager</span>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="tdb-section tdb-agent tdb-no-pt">
+    <div class="container">
+        <div class="row justify-content-center pb-5">
+      <div class="col-md-12 heading-section text-center tdb-animate">
+          <span class="subheading">Agents</span>
+        <h2 class="mb-4">Our Agents</h2>
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3 tdb-animate">
+            <div class="agent">
+                    <div class="img">
+                        <img src="assets/images/team-1.jpg" class="img-fluid" alt="">
+                    </div>
+                    <div class="desc">
+                        <h3><a href="properties.html">James Stallon</a></h3>
+                            <p class="h-info"><span class="location">Listing</span> <span class="details">&mdash; 10 Properties</span></p>
+                    </div>
+                </div>
+        </div>
+        <div class="col-md-3 tdb-animate">
+            <div class="agent">
+                    <div class="img">
+                        <img src="assets/images/team-2.jpg" class="img-fluid" alt="">
+                    </div>
+                    <div class="desc">
+                        <h3><a href="properties.html">James Stallon</a></h3>
+                            <p class="h-info"><span class="location">Listing</span> <span class="details">&mdash; 10 Properties</span></p>
+                    </div>
+                </div>
+        </div>
+        <div class="col-md-3 tdb-animate">
+            <div class="agent">
+                    <div class="img">
+                        <img src="assets/images/team-3.jpg" class="img-fluid" alt="">
+                    </div>
+                    <div class="desc">
+                        <h3><a href="properties.html">James Stallon</a></h3>
+                            <p class="h-info"><span class="location">Listing</span> <span class="details">&mdash; 10 Properties</span></p>
+                    </div>
+                </div>
+        </div>
+        <div class="col-md-3 tdb-animate">
+            <div class="agent">
+                    <div class="img">
+                        <img src="assets/images/team-4.jpg" class="img-fluid" alt="">
+                    </div>
+                    <div class="desc">
+                        <h3><a href="properties.html">James Stallon</a></h3>
+                            <p class="h-info"><span class="position">Listing</span> <span class="details">&mdash; 10 Properties</span></p>
+                    </div>
+                </div>
+        </div>
+    </div>
+    </div>
+</section>
+<app-footer></app-footer>
+
+
+
+
+

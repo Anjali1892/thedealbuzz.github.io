@@ -1,0 +1,19 @@
+.contact-section .contact-info p a {
+    color: #1a1a1a; }
+  
+  .contact-section .contact-info p span {
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+    color: #000000; }
+  
+  .contact-section .contact-info .icon span {
+    font-size: 20px; }
+  
+  @media (min-width: 992px) {
+    .contact-section .contact-info .border-height {
+      border-left: 1px solid rgba(0, 0, 0, 0.1);
+      border-right: 1px solid rgba(0, 0, 0, 0.1); } }
+  
+  .contact-section .contact-form {
+    width: 100%; }

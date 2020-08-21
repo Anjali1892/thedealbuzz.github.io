@@ -1,0 +1,31 @@
+<nav class="navbar navbar-expand-lg navbar-dark tdb_navbar bg-dark tdb-navbar-light" id="tdb-navbar">
+  <div class="container">
+    <a class="navbar-brand db-logo" href="index.html">TheDeal<span>Buzz</span></a>
+    <p class="lead" style="color:white;">
+      <a class="btn btn-primary btn-lg" role="button" (click)="logout()">Log Out</a>
+    </p>
+    </div>
+  </nav>
+<div class="row" style="margin:10rem auto; display:block; padding:20px; background-color:#eff0f2;border-radius:15px;width:80%;
+-webkit-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.2);
+-moz-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.2);
+box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.2);">
+  <!-- <div class="col-sm-12" style="text-align:center;">
+    Register
+  </div> -->
+
+
+  <div class="col-sm-12">
+      <div class="jumbotron">
+          <h1 class="display-4">Admin Panel</h1>
+          <hr class="my-4">
+
+  <a class="btn btn-primary btn-lg" routerLinkActive="active" routerLink="/product-lists">View Listings</a> &nbsp;
+  <a class="btn btn-primary btn-lg" routerLinkActive="active" routerLink="/create-product">Add Listing</a> <br>
+ 
+        </div>
+  </div>
+</div>
+
+
+<router-outlet></router-outlet>

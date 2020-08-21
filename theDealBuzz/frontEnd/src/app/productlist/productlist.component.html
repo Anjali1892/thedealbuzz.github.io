@@ -1,0 +1,50 @@
+<app-header></app-header>
+<section class="hero-wrap hero-wrap-2 tdb-degree-bg js-fullheight banner" style="background-image: url('assets/images/properties-banner.jpg');" data-stellar-background-ratio="0.5">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
+      <div class="col-md-9 tdb-animate pb-5 text-center">
+        <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Properties <i class="ion-ios-arrow-forward"></i></span></p>
+        <h1 class="mb-3 bread">Explore Canada's  <br>Real Estate Market </h1>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="tdb-section goto-here">
+  <div class="container">
+      <div class="row justify-content-center">
+    <div class="col-md-12 heading-section text-center tdb-animate mb-5">
+        <span class="subheading">What we offer</span>
+      <h2 class="mb-2">New Listings Daily, Right At Your Fingertips   </h2>
+    </div>
+  </div>
+
+
+    <div class="row">
+      <input type="text" class="form-control search" placeholder="Search..." [(ngModel)]="province" >
+      <div class="col-md-4"  *ngFor="let product of productList | filter:province">
+          <div class="property-wrap tdb-animate">
+              <a href="#" class="img" style="background-image: url(assets/images/work-2.jpg);"></a>
+              <div class="text">
+
+                  <p class="price"><span class="old-price">800,000</span><span class="orig-price">${{product.price}}<small>/mo</small></span></p>
+                  <ul class="property_list">
+                      <li><span class="fa fa-bed"></span>3</li>
+                      <li><span class="fa fa-bathtub"></span>2</li>
+                      <li><span class="fas fa-stream"></span>1,878 sqft</li>
+                  </ul>
+                  <h3><a [routerLink]="['/product-details']" routerLinkActive="active">{{product.buildingType}}</a></h3>
+                  <span class="location">{{product.locality}}, {{product.city}}, {{product.postalCode}}</span>
+                  <a [routerLink]="['/product-details']" routerLinkActive="active" class="d-flex align-items-center justify-content-center btn-custom">
+                      <span class="fa fa-link"></span>
+                  </a>
+              </div>
+          </div>
+      </div>
+    </div>
+
+
+  </div>
+</section>
+<app-footer></app-footer>
